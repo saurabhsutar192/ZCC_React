@@ -1,0 +1,98 @@
+.MIPage {
+  /* justify-content: center; */
+  align-items: center;
+}
+
+/* @media (orientation: landscape) {
+  .MIPage {
+    align-items: center;
+  }
+} */
+
+.mCard {
+  /* background-color: turquoise; */
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 50px; */
+  /* animation-name: pop;
+  animation-duration: 1.5s; */
+  overflow: auto;
+  /* background-color: aqua; */
+}
+
+.musicBadges {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: yellow; */
+  margin: 2vh 0;
+  flex-wrap: nowrap;
+  /* padding: 0 100=px; */
+  width: 100%;
+}
+
+.mCard .mainTitle {
+  margin-top: 3vh;
+  /* font-size: 6vw; */
+}
+
+.badge.rec,
+.badge.jam {
+  position: relative;
+  animation: none;
+  /* background-color: lawngreen; */
+}
+
+.mixer {
+  transform: scale(0.8);
+}
+
+.guitar {
+  transform: scale(1.5) translate(7%, -7%);
+}
+
+@media (orientation: portrait) {
+  .mCard {
+    margin-top: 0;
+  }
+  .MIPage {
+    align-items: center;
+  }
+
+  .musicBadges {
+    flex-direction: column;
+    margin: 1vh 0;
+  }
+  .mCard .badge {
+    width: 35vw;
+    height: 35vw;
+  }
+  .mCard .mainTitle {
+    margin: 2vh 0 0 0;
+    /* font-size: 12vw; */
+  }
+
+  .mCard .mtext {
+    font-size: min(max(9px, 2vw), 40px);
+  }
+  .MISwipe {
+    margin: 1vh auto;
+    width: 4vh;
+    height: 4vh;
+  }
+  /* .MIPage .spacer {
+    height: 18vh;
+  } */
+}
+
+@media (orientation: landscape) and (max-height: 540px) {
+  /* .mCard {
+    margin-top: 2vh;
+  } */
+  .MISwipe img {
+    margin-top: 0vh;
+  }
+}

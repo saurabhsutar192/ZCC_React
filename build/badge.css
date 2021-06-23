@@ -1,0 +1,79 @@
+.badge {
+  height: 20vw;
+  min-height: 147px;
+  max-height: 500px;
+  width: 20vw;
+  min-width: 147px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*background-color: orange;*/
+  margin: 0 10px;
+  
+  transition: 0.2s ease-in;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+.outerCircle {
+  height: 80%;
+  width: 80%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: -11px 14px 34px rgba(0, 0, 0, 0.25);
+}
+
+.innerCircle {
+  height: 90%;
+  width: 90%;
+  background-color: #ffa800;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.textArea {
+  position: absolute;
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  height: 18%;
+  background-color: white;
+  border-radius: 100vw;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  box-shadow: -11px 14px 34px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  overflow: auto;
+
+  font-weight: 500;
+  /* font-size: 1.3vw; */
+  font-size: min(max(9px, 1.3vw), 40px);
+
+  letter-spacing: 0.5em;
+
+  color: #686868;
+}
+
+.badge-text {
+  margin-right: -0.5em;
+}
+
+.badge-img {
+  width: auto;
+  height: 100%;
+}
+

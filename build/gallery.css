@@ -1,0 +1,168 @@
+.gallery {
+  display: grid;
+   width: 100vw; 
+   /* overflow: hidden; */
+  grid-template-columns: repeat(4,1fr);
+  /* grid-template-rows: repeat(4,1fr); */
+  /* grid-template-areas:
+    "l1 l3 l3"
+    "l1 l3 l3"
+    "l1 l4 l4"
+    "l2 l4 l4"
+    "l2 l5 l5"
+    "l2 l5 l5"; */
+    grid-row-gap: 1.2%;
+    grid-column-gap:0.5% ;
+    
+   
+
+}
+
+.page > .gallery{
+  overflow-x: hidden;
+  padding: 1%;
+  
+} 
+
+
+
+.gallery.artGall{
+
+  grid-template-columns: repeat(3,1fr);
+  width: 100%;
+  height: fit-content;
+  padding-left: 1.5rem;
+  padding-right: 2%;
+  grid-gap: 3%;
+  margin-top: 3%;
+  
+  /* background-color: brown; */
+}
+
+
+
+
+
+
+.gallery .gImgs{
+  width: 100%;
+  height: 25vh;
+  border-radius: 1rem;
+  
+  object-fit: cover;
+  /* animation: pop ease 1s; */
+  transition: ease 0.5s;
+  /* cursor: pointer; */
+  box-shadow: -8px 10px 22px -1px rgba(0,0,0,0.4);
+-webkit-box-shadow: -8px 10px 22px -1px rgba(0,0,0,0.4);
+-moz-box-shadow: -8px 10px 22px -1px rgba(0,0,0,0.4);
+}
+
+.gallery.artGall .gImgs{
+  /* height:20px;
+  width:20px; */
+  /* background-color: brown; */
+  border-radius: 10%;
+
+}
+
+
+
+ .gallery .gImgs:hover{
+  transform: scale(0.95) !important;
+  cursor: pointer;
+} 
+
+
+/* .justAnimate {
+  animation: slideUp 2s ease-in;
+  animation-fill-mode: both;
+} */
+
+.imageViewer {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%) scale(0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.2s ease-in;
+  -webkit-box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.gallery.artGall .show{
+  transform: translate(-60%, -65%) scale(1);
+  z-index: 10;
+}
+
+.viewedImg {
+  height: 70vh;
+  width: auto;
+  margin: 0.8em;
+  border-radius: 20px;
+}
+
+.cross {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  transform: scale(2);
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+
+
+@media (orientation: portrait) {
+
+ 
+  .viewedImg {
+    height: auto;
+    width: 80vw;
+  }
+
+  .gallery{
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-column-gap:1.5%
+  }
+  .gallery.artGall{
+
+    grid-template-columns: repeat(2,1fr);
+    padding:0;
+    grid-gap: 1rem;
+    
+  }
+  .gallery.artGall .show{
+    transform: translate(-59%, -65%) scale(1);
+
+  }
+  
+  
+}
+
+/* @keyframes fade {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    
+    opacity: 1;
+  }
+} */

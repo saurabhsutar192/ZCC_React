@@ -1,0 +1,120 @@
+.aPage {
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.aCard {
+  width: 40%;
+  min-width: 340px;
+  min-height: 179px;
+  margin-top: 0;
+  height: fit-content;
+}
+
+
+
+.owner {
+  display: flex;
+  flex-direction: column;
+  /* background-color: cornflowerblue; */
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+}
+.ownerDesc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-top: 3vh;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+
+  text-align: center;
+  letter-spacing: 0.31em;
+  height: fit-content;
+  align-items: center;
+  color: #565555;
+}
+.oImg {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  background-image:url("imgs/saurabh.jpg");
+  background-size: cover;
+}
+
+.oPN {
+  text-align: right;
+  line-height: normal;
+  margin-right: 0.8em;
+}
+
+.aCard .name {
+  font-weight: 700;
+  font-size: 5vh;
+
+  /* background-color: coral; */
+  text-align: center;
+
+  margin-left: 0.28em;
+  letter-spacing: 0.28em;
+  display: inline-block;
+  color: #565555;
+}
+
+.aCard .NnN {
+  width: fit-content;
+  margin: 1.5vh;
+}
+
+.aPage .spacer{
+  height: 20vh;
+}
+
+/*Media queries*/
+
+@media (orientation: portrait) {
+ 
+  .aCard {
+    width: 80%;
+    min-width: 224px;
+    min-height: 253px;
+    height: fit-content;
+  }
+
+  .aCard .mainTitle {
+    margin: 2vh 0;
+    /* font-size: 10vw; */
+  }
+
+  .ownerDesc {
+    margin-top: 3vw;
+    font-size: 2vw;
+  }
+
+  .aCard .name {
+    font-size: 6vw;
+    line-height: normal;
+  }
+  .oImg {
+    height: 20vw;
+    width: 20vw;
+    
+  }
+
+  .aCard .NnN {
+    width: fit-content;
+    margin: 1vw;
+  }
+  .aPage .spacer{
+    height: 18vh
+  }
+}
+
+/* @media (orientation: landscape) and (max-height: 540px) {
+  .aCard {
+    margin-top: 15vh;
+  }
+} */

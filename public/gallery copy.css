@@ -1,0 +1,206 @@
+.gallery {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  /* background-color: brown; */
+}
+
+.gLeft {
+  /* background-color: black; */
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(6, 1fr);
+  font-size: 50px;
+  grid-template-areas:
+    "l1 l3 l3"
+    "l1 l3 l3"
+    "l1 l4 l4"
+    "l2 l4 l4"
+    "l2 l5 l5"
+    "l2 l5 l5";
+}
+
+.gLeft div {
+  /* background-color: thistle; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gLeft div img {
+  transform: scale(0.6);
+}
+
+.l1 {
+  grid-area: l1;
+}
+/* .l1 img,
+.l2 img {
+  height: 100%;
+}
+
+.l3 img,
+.l4 img,
+.l5 img {
+  width: 100%;
+} */
+
+.l2 {
+  grid-area: l2;
+}
+
+.l3 {
+  grid-area: l3;
+}
+.l4 {
+  grid-area: l4;
+}
+.l5 {
+  grid-area: l5;
+}
+
+.gRight {
+  /* background-color: white; */
+  width: 50%;
+  height: 100%;
+  font-size: 50px;
+  display: grid;
+  grid-template-areas:
+    "r1 r1 r3"
+    "r1 r1 r3"
+    "r2 r2 r3"
+    "r2 r2 r4"
+    "r5 r5 r4"
+    "r5 r5 r4";
+}
+
+.gRight div {
+  /* background-color: yellow; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.gRight div img {
+  transform: scale(0.6);
+}
+
+/* .gRight div:nth-child(odd) {
+  background-color: yellowgreen;
+} */
+
+.r1 {
+  grid-area: r1;
+}
+
+.r2 {
+  grid-area: r2;
+}
+
+.r3 {
+  grid-area: r3;
+}
+.r4 {
+  grid-area: r4;
+}
+.r5 {
+  grid-area: r5;
+}
+
+/* .inAnim {
+  animation: slide-up 1s ease-in;
+} */
+
+.justAnimate {
+  animation: slideUp 2s ease-in;
+  animation-fill-mode: both;
+}
+
+.imageViewer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%) scale(0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.2s ease-in;
+  -webkit-box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: -5px 6px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.viewedImg {
+  height: 70vh;
+  width: auto;
+  margin: 0.8em;
+  border-radius: 20px;
+}
+
+.cross {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  transform: scale(2);
+  filter: invert(100%);
+}
+@media (orientation: portrait) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gLeft {
+    width: 100%;
+    height: 50%;
+    /* grid-template-areas:
+      "l1 l1 l3"
+      "l1 l1 l3"
+      "l1 l1 l4"
+      "l2 l2 l4"
+      "l2 l2 l5"
+      "l2 l2 l5"; */
+  }
+  .gRight {
+    width: 100%;
+    height: 50%;
+    /* grid-template-areas:
+      "r2 r3"
+      "r1 r1"; */
+  }
+  .imageViewer {
+    width: 80%;
+    height: auto;
+  }
+  .viewedImg {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    
+    transform: translateY(150px) scale(0.6);
+  }
+  100% {
+    
+    transform: translateY(0) scale(0.6);
+  }
+}

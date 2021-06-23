@@ -1,0 +1,119 @@
+.regPage {
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.Form{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+
+
+
+
+.regCard {
+  width: 60%;
+  height: fit-content;
+  /* margin-bottom: 10px; */
+  margin-top: 0;
+  min-width: 340px;
+  /* max-width: 1152px; */
+  min-height: 213px;
+  /* max-height: 834px; */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.userInput {
+  background: #dbdbdbcc;
+  box-shadow: inset -2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 3vh 0;
+  width: 80%;
+  border: none;
+  border-radius: 300px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vh;
+  line-height: 0;
+
+  letter-spacing: 0.3em;
+
+  color: #939393;
+  outline: none;
+  margin: 3vh;
+  text-align: center;
+}
+
+.regBtn {
+  border: 0.6vh solid #000000;
+  cursor: pointer;
+  border-radius: 300px;
+  width: fit-content;
+  margin: 2vh 0 5vh 0;
+  font-weight: 900;
+  font-size: 2vh;
+  letter-spacing: 0.695em;
+  transition: ease 0.2s;
+  padding: 2vh 0.5em 2vh 1.19em;
+}
+
+.regBtn:hover{
+  transform: scale(1.1);
+}
+
+.regPage .spacer{
+  height: 13vh
+}
+
+/*Media Queries*/
+
+@media (orientation: portrait) {
+  .regCard {
+    width: 80%;
+    height: fit-content;
+    min-width: 256px;
+    min-height: 258px;
+  }
+  .regCard .mainTitle {
+    margin-top: 2vh;
+    /* font-size: 7vw; */
+  }
+
+  .userInput {
+    padding: 3vw 0;
+    width: 80%;
+
+    font-size: 3vw;
+
+    margin: 3vw;
+  }
+
+  .regBtn {
+    border: 0.7vw solid #000000;
+
+    margin-bottom: 7vw;
+
+    font-size: 2vw;
+    letter-spacing: 1vw;
+
+    padding: 2vw 2vw 2vw 2.5vw;
+  }
+  .regPage .spacer{
+    height: 10vh
+  }
+}
+
+/* @media (orientation: landscape) and (max-height: 540px) {
+  .regCard {
+    margin-top: 15vh;
+  }
+} */

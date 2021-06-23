@@ -1,0 +1,160 @@
+.conPage {
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.conCard .mainTitle {
+  /* font-size: 5vw; */
+  
+  width: fit-content;
+}
+
+.contacts {
+  display: flex;
+  margin: 5vh 0;
+  width: fit-content;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: hotpink; */
+  padding: 0 4vw;
+}
+
+.conCard {
+  width: 80%;
+  min-height: 167px;
+  min-width: 454px;
+  
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  height: fit-content;
+  margin: 2% 3%;
+  /* background-color: grey; */
+}
+
+.cRec,
+.cDrama,
+.cArt {
+  align-items: flex-end;
+}
+
+.conCard .cRec .pn,
+.conCard .cDrama .pn,
+.conCard .cArt .pn {
+  margin-right: 4vw;
+  margin-left: 0;
+}
+
+.conts .section {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+
+  letter-spacing: 0.28em;
+
+  /* background-color: burlywood; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0.4vw;
+  color: #565555;
+}
+
+.conCard .SnN {
+  /* background-color: royalblue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.conCard .name {
+  font-weight: 500;
+  font-size: 2.5vw;
+
+  /* background-color: coral; */
+  text-align: center;
+  margin: 0 0.5vw;
+  letter-spacing: 0.28em;
+  display: inline-block;
+  color: #565555;
+}
+
+.conCard .pn {
+  /* background-color: salmon; */
+  font-weight: 500;
+  font-size: 1.5vw;
+  margin-left: 3vw;
+  letter-spacing: 0.28em;
+  width: fit-content;
+  color: #565555;
+}
+
+.conPage .spacer{
+  height: 15vh;
+}
+
+/*Media Queries*/
+
+@media (orientation: portrait) {
+  .conCard {
+    min-width: 224px;
+    min-height: 253px;
+  }
+
+  .conCard .name {
+    font-size: 4vw;
+  }
+
+  
+
+  .conCard .section {
+    font-size: 1.5vw;
+  }
+
+  .contacts {
+    margin: 5vw 0;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conCard .pn {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 2vw;
+  }
+
+  .cRec,
+  .cDrama,
+  .cArt,
+  .conts {
+    align-items: center;
+  }
+
+  .conCard .cRec .pn,
+  .conCard .cDrama .pn,
+  .conCard .cArt .pn {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .conPage .spacer{
+    height: 18vh
+  }
+  
+}
+
+/* @media (orientation: landscape) and (max-height: 540px) {
+  .conCard {
+    margin-top: 15vh;
+  }
+} */

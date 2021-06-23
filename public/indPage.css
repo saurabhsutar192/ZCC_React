@@ -1,0 +1,282 @@
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.indCard {
+  width: 85vw;
+
+  /* margin: 100px 5vw 0 0; */
+  /* position: relative; */
+  /* background-color: khaki; */
+  overflow: visible;
+
+  margin-left: 2%;
+
+  background-size: cover;
+  /* animation: indAnim;
+    animation-duration: 0.7s;
+    animation-timing-function: ease; */
+}
+
+.indCard.artCard,
+.indCard.dramaCard,
+.indCard.photoCard {
+  background: linear-gradient(251.2deg, #3c096c 1.05%, #ffffff 75.91%);
+}
+
+.indCard.recCard,
+.indCard.danceCard,
+.indCard.jamCard {
+  background: linear-gradient(250.23deg, #297f6b 1.81%, #ffffff 80.29%);
+}
+
+.indImg {
+  position: absolute;
+  z-index: 2;
+  height: 23vw;
+
+  width: 23vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  transform: translate(-30%, 10%);
+  /* animation: pop;
+  animation-duration: 0.5s;
+  animation-timing-function: ease; */
+}
+
+.indImg img {
+  height: 100%;
+  width: auto;
+}
+
+.indImg.photoClass {
+  /* height: 40vh;
+    width: 40vh; */
+  transform: translate(-20%, 10%);
+}
+
+.indIcon {
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
+  transform: rotate(90deg) scale(0.8);
+  cursor: pointer;
+}
+
+/* overRiding Title */
+.indCard .indTitle {
+  float: left;
+  width: fit-content;
+  margin: 1vw 0 0 2vw;
+  /* background-color: aquamarine;  */
+  text-align: center;
+}
+
+.indCard .mainTitle {
+  width: fit-content;
+  height: 4.5vw;
+  max-height: 120px;
+  min-height: 35px;
+  /* background-color: chocolate;  */
+  /* font-size: 5vw; */
+  /* margin: 20px 0 0 30px; */
+  /* background-color: bisque; */
+}
+
+.indSubtitle {
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+  font-size: 1.2vw;
+  margin: 0 -0.4rem 0 0;
+  /* identical to box height */
+  /* margin-right: 4%; */
+  text-align: center;
+  letter-spacing: 0.4rem;
+  /* background-color: aqua; */
+  color: #565555;
+}
+
+.indContent {
+  height: 100%;
+  width: 70%;
+
+  /* padding: 0 5rem 0 0;  */
+  margin: 0 1rem;
+  overflow-y: auto;
+  /* background-color: yellowgreen;    */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.artContent {
+  /* background-color: brown;  */
+  padding-bottom: 5%;
+  width: 80%;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: white;
+
+  border-radius: 10px;
+}
+
+/*Media queries*/
+
+@media (orientation: portrait) {
+  .indCard {
+    background-image: url("imgs/PageImgs/cardBackPortrait.png");
+
+    background-size: cover;
+  }
+
+  /* .indPage {
+    justify-content: center;
+  } */
+  .indCard {
+    /* margin: 90px 0 0 0; */
+    text-align: center;
+    height: fit-content;
+    min-height: 426px;
+    min-width: 256px;
+    max-height: 1440px;
+    max-width: 864px;
+    margin-left: 0;
+  }
+
+  .indCard.artCard,
+  .indCard.dramaCard,
+  .indCard.photoCard {
+    background: linear-gradient(0deg, #3c096c 1.05%, #ffffff 75.91%);
+  }
+
+  .indCard.recCard,
+  .indCard.danceCard,
+  .indCard.jamCard {
+    background: linear-gradient(0deg, #297f6b 1.81%, #ffffff 80.29%);
+  }
+
+  .indImg {
+    right: 0%;
+    top: 0;
+    height: 20vw;
+    width: 20vw;
+    max-height: 200px;
+    transform: translate(5.5vw, -3vw);
+  }
+
+  .indImg.photoClass {
+    /* height: 35vw;
+    width: 35vw;  */
+    transform: translate(5.5vw, -3vw);
+  }
+
+  .indCard .indTitle {
+    float: none;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .indContent {
+    height: 70vh;
+    width: 98%;
+    padding: 0 5%;
+    padding-bottom: 15%;
+    margin: 3vw auto 0 auto;
+    overflow-y: auto;
+    /* background-color: yellowgreen; */
+  }
+
+  /* .indCard .mainTitle.photoTitle {
+    font-size: 7vw;
+  } */
+
+  .indCard .mainTitle {
+    margin: 20px 0 0 0;
+    height: 9vw;
+    max-height: 100px;
+
+    font-size: min(max(30px, 10vw), 100px);
+    /* font-size: 11vw; */
+    /* background-color: yellowgreen;  */
+  }
+
+  .indSubtitle {
+    font-size: min(max(8px, 3vw), 32px);
+
+    /* margin: -2.5vw 0 0 0; */
+
+    text-align: center;
+  }
+  .indIcon {
+    left: 5px;
+    bottom: 5px;
+    transform: rotate(90deg) scale(0.6);
+  }
+
+  .indPage .spacer {
+    height: 9vh;
+  }
+
+  #scroll::-webkit-scrollbar-track {
+    margin: 3vh 1vw 3vh 0;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 823px) {
+  .indCard {
+    /* margin: 70px 0 0 0; */
+    margin-top: 0;
+    text-align: center;
+
+    min-height: 380px;
+    min-width: 256px;
+    max-height: 1440px;
+    max-width: 864px;
+  }
+  .indSubtitle {
+    letter-spacing: 0.8vw;
+    /* margin: 0 -3.5vw 0 0; */
+  }
+  /* .indContent {
+    height: fit-content;
+    padding-bottom: 5vh;
+  } */
+  .indIcon {
+    left: 1px;
+    bottom: 1px;
+  }
+  .indPage .spacer {
+    height: 13vh;
+  }
+}
+
+/* @media (orientation: portrait) and (max-height: 568px) {
+  .indImg {
+    transform: scale(0.4) translate(-122%, 100%);
+  }
+} */
+
+@media (orientation: landscape) and (max-height: 540px) {
+  .indIcon {
+    transform: rotate(90deg) scale(0.7) translate(40%, 0%);
+    left: 0;
+    bottom: 0;
+  }
+}
+
+/* @keyframes indAnim { 
+  0%{
+    opacity: 0;
+    transform: scaleX(0) ;
+  }
+  100%{
+    opacity:1;
+    transform:scaleX(1) ;
+  }
+}  */

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.lPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  width: 80vw;
+  height: fit-content;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  /* background-color: lightcoral; */
+  z-index: 0;
+}
+.InT {
+  /* background-color: khaki; */
+  display: flex;
+  align-items: flex-end;
+}
+
+.image {
+  width: 45%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* background-color: royalblue; */
+}
+
+.image img {
+  /* background-color: chartreuse; */
+
+  width: 90%;
+  height: auto;
+}
+
+.title {
+  height: fit-content;
+  width: 55%;
+
+  text-align: right;
+  font-size: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vw;
+  line-height: 8vw;
+  /* background-color: cadetblue; */
+}
+
+.title span {
+  color: #a50059;
+
+  margin: 5px 0px 5px 0;
+  height: fit-content;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: -4px 4px 4px rgb(0, 0, 0, 0.5);
+  /*font-family: Richie Brusher;*/
+  /* background-color: coral; */
+}
+
+span.zeal {
+  font-size: 12vw;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+span.cultural {
+  font-weight: 600;
+  letter-spacing: 0.045em;
+}
+span.centre {
+  font-size: 5vw;
+  line-height: 2.5vw;
+  font-weight: 500;
+}
+
+/* .iconDiv img {
+   background-color: thistle; 
+
+  width: 3vw;
+  height: 3vw;
+  margin-top: 1.8vw;
+} */
+
+.ldButtons {
+  /* background-color: aqua; */
+  display: flex;
+  /* margin: 3vw 0 2vw 0; */
+  padding: 1rem;
+  flex-direction: row-reverse;
+}
+
+.reg-btn,
+.int-btn {
+  border: 0.25vw solid #a50059;
+  color: #a50059;
+  border-radius: 1vw;
+  height: 3.5vw;
+  width: 13vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1vw;
+  letter-spacing: 0.695em;
+
+  padding: 1vw 0.5vw 1vw 1vw;
+  margin: 3vw 0.5vw 0 0.5vw;
+  transition: 0.1s ease-in;
+}
+
+.int-btn {
+  color: white;
+  background-color: #a50059;
+  border: none;
+}
+
+.int-btn:hover {
+  transform: scale(1.1);
+}
+
+.reg-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries*/
+
+@media (orientation: portrait) {
+  .landing {
+    width: fit-content;
+  }
+  .InT {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    height: 40vh;
+    width: auto;
+  }
+  .image img {
+    height: 90%;
+    width: auto;
+  }
+
+  .title {
+    width: fit-content;
+    height: auto;
+    font-size: 7.5vh;
+    line-height: 9vh;
+    padding: 2vh;
+  }
+
+  span.zeal {
+    font-size: 12vh;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+  span.cultural {
+    font-weight: 600;
+    letter-spacing: 0.045em;
+  }
+  span.centre {
+    font-size: 5vh;
+    line-height: 2.5vh;
+    font-weight: 500;
+  }
+  .ldButtons {
+    flex-direction: column;
+  }
+
+  .reg-btn,
+  .int-btn {
+    height: 5vh;
+    width: 20vh;
+
+    border-radius: 1vh;
+
+    font-size: 1.5vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 1vh; */
+    /* padding: 1.5vh 0.5vh 1.5vh 1vh;  */
+    margin-top: 2vh;
+  }
+
+  .iconDiv img {
+    margin-top: 4vh;
+    width: 4vh;
+    height: 4vh;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+  .title {
+    font-size: 7vh;
+    line-height: 7vh;
+  }
+  .image {
+    height: 30vh;
+    width: auto;
+  }
+}
